@@ -1,0 +1,206 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: inherit;
+    }
+    
+    html {
+        box-sizing: border-box;
+        font-size: 62.5%;
+    }
+    
+    body {
+        font-family: "poppins", sans-serif;
+        font-weight: 400;
+        line-height: 1.6;
+        background-size: cover;
+        background-image: linear-gradient(to bottom, hsla(0, 100%, 74%, 0.7), hsla(0, 100%, 74%, 0.7)), url(../images/bg-intro-desktop.png);
+    }
+    
+    .container {
+        width: 80%;
+        min-height: 100vh;
+        display: flex;
+        margin: auto;
+        align-items: center;
+    }
+    
+    .header {
+        flex: 0 0 50%;
+        padding-right: 4.5rem;
+    }
+    
+    .header h1 {
+        font-size: 3rem;
+        color: hsl(0, 0%, 100%);
+        line-height: 1;
+        padding-bottom: 4rem;
+    }
+    
+    .header p {
+        color: hsl(0, 0%, 100%);
+        font-size: 1.8rem;
+    }
+    
+    .content {
+        flex: 0 0 50%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .heading {
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        padding-bottom: 2rem;
+    }
+    
+    .heading h2 {
+        color: hsl(0, 0%, 100%);
+        font-size: 1.8rem;
+        padding: 2rem;
+        background-color: hsl(247, 48%, 40%);
+        border-radius: 1rem;
+        box-shadow: 0 .5rem 1rem hsl(0, 0%, 0%);
+    }
+    
+    .heading h2 span {
+        font-weight: 100;
+        color: hsl(247, 20%, 78%);
+    }
+    
+    .form {
+        width: 80%;
+        margin: auto;
+        background-color: white;
+        border-radius: 1rem;
+        padding-top: 3rem;
+    }
+    
+    .form-control {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    
+    .form-control input {
+        margin: auto;
+        border: 1px solid #eee;
+        font-size: 1.5rem;
+        font-family: inherit;
+        padding: 1.5rem 2rem;
+        width: 90%;
+        display: block;
+        /* margin-bottom: 1rem; */
+        background-color: transparent;
+        transition: all .3s;
+    }
+    
+    .form-control input:focus {
+        outline: 0;
+        border-color: hsl(247, 48%, 40%);
+    }
+    
+    .form-control.error input {
+        border-color: hsl(0, 100%, 74%);
+    }
+    
+    .form-control .form-image {
+        position: absolute;
+        top: 15px;
+        right: 4rem;
+        visibility: hidden;
+    }
+    
+    .form-control.error .form-image {
+        visibility: visible;
+    }
+    
+    .form-control .error-msg {
+        text-align: end;
+        margin-right: 5%;
+        font-size: 1rem;
+        color: hsl(0, 100%, 74%);
+        transition: all .5s ease;
+        visibility: hidden;
+    }
+    
+    .form-control.error .error-msg {
+        visibility: visible;
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+    }
+    
+    button {
+        background-color: hsl(154, 59%, 51%);
+        color: #fff;
+        border: none;
+        border-radius: .3rem;
+        font-family: "poppins", sans-serif;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        padding: 1.8rem 3rem;
+        cursor: pointer;
+        width: 90%;
+        margin: 2rem 0 1rem;
+        margin-left: 5%;
+        transition: all .2s;
+        border-radius: 3px;
+        outline: none;
+    }
+    
+    button:active,
+    button:hover {
+        background-color: hsla(154, 59%, 51%, 0.7);
+    }
+    
+    .para {
+        text-align: center;
+        color: hsl(246, 25%, 77%);
+        margin-bottom: 3rem;
+        font-size: 1.3rem;
+    }
+    
+    .para a {
+        text-decoration: none;
+        color: hsl(0, 100%, 74%);
+        font-weight: 900;
+    }
+    
+    @media only screen and (max-width: 65.625em) {
+        html {
+            font-size: 50%;
+        }
+    }
+    
+    @media only screen and (max-width: 50em) {
+        .container {
+            flex-direction: column;
+            justify-content: center;
+        }
+        h1 {
+            text-align: center;
+        }
+        .header,
+        .content {
+            flex: 0;
+            width: 90%;
+        }
+        .header {
+            padding-bottom: 2rem;
+            padding-right: 0rem;
+        }
+        .heading,
+        .form {
+            width: 100%;
+        }
+        .form-control .form-image {
+            top: 9px;
+        }
+    }
+    
+    @media only screen and (max-width: 28.125em) {
+        .form-control .form-image {
+            right: 2rem
+        }
+    }
